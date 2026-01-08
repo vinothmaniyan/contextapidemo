@@ -5,10 +5,11 @@ import Profile from './components/Profile'
 import {LoginContext} from './contexts/LoginContext'
 function App(){
   const [name,setName]=useState("")
-  const[profileinfo,setProfileinfo]=useState(false)
+  const [pwd,setPwd]=useState("")
+  const[profileinfo,setProfileinfo]=useState(null)
   return(
     <div>
-      <LoginContext.Provider value={{name,setName,setProfileinfo}}>
+      <LoginContext.Provider value={{name,setName,pwd,setPwd,profileinfo,setProfileinfo}}>
       {profileinfo ? <Profile /> : <Login />}
       </LoginContext.Provider>
   
