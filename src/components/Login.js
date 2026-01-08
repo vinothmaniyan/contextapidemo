@@ -8,7 +8,7 @@ function Login(){
    // const[pwd,setPwd]=useState("")
    // const[profileinfo,setProfileinfo]=useState(false)
    const show=()=>{
-       if (name==="M.vinoth" && pwd==="vinoth@123")
+       if (name==="M.Vinoth" && pwd==="vinoth@123")
        setProfileinfo(true)
         else
        setProfileinfo(false)  }
