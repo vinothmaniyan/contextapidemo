@@ -1,4 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
+import {useState} from 'react'
+import Login from './components/Login'
+import Profile from './components/Profile'
+import {LoginContext} from './contexts/LoginContext'
+function App(){
+  const [name,setName]=useState("")
+  const[profileinfo,setProfileinfo]=useState(false)
+  return(
+    <div>
+      <LoginContext.Provider value={{name,setName,setProfileinfo}}>
+      {profileinfo ? <Profile /> : <Login />}
+      </LoginContext.Provider>
+  
+    </div>
+  )
+}
+export default App
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
